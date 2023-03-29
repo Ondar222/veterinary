@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_elements_management_cards",
+  "info": {
+    "displayName": "management-card"
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "patronymic": {
+      "type": "string"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string",
+      "default": "+7-999-555-0101"
+    }
+  }
+}

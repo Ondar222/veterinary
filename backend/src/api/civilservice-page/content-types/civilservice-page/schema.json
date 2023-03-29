@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "civilservice_pages",
+  "info": {
+    "singularName": "civilservice-page",
+    "pluralName": "civilservice-pages",
+    "displayName": "Civilservice-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sorting": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static-page.standart-page"
+    }
+  }
+}

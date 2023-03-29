@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "management_pages",
+  "info": {
+    "singularName": "management-page",
+    "pluralName": "management-pages",
+    "displayName": "Management-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "management": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.management-card"
+    }
+  }
+}

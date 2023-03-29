@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_pages",
+  "info": {
+    "singularName": "main-page",
+    "pluralName": "main-pages",
+    "displayName": "main-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slider": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.slider"
+    },
+    "pinned_links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.pinned-link"
+    }
+  }
+}

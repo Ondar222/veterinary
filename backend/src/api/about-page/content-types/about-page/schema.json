@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sorting": {
+      "type": "integer"
+    },
+    "page": {
+      "type": "component",
+      "repeatable": false,
+      "component": "static-page.standart-page"
+    }
+  }
+}

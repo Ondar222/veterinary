@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_pinned_links",
+  "info": {
+    "displayName": "pinned_link"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "default": "https://rtyva.ru",
+      "required": true
+    }
+  }
+}
