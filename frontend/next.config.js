@@ -3,8 +3,9 @@ const webpack = require('webpack')
 const nextConfig = {
   // target: 'server',
   env: {
-    APIpath: 'http://api.tere-khol.khural.rtyva.ru',
-    token: '7980cfe0d517fbdfd89dac33694676267561e773fd27ad2fc10835f8128e7ca24533703fc4928a366ce0417b6ed2c1580aec0e416e08c03aa8e927038332830b93cb028a99ab2b1d074de44fdc8827c53f131a685283f6532e92ec32848f7e85a1868214881c7cdaecffda390c237a3703d2a0df64d48612c64c350250ea3a18'
+    path: "api.oopt.rtyva.ru",
+    APIpath: `http://api.oopt.rtyva.ru`,
+    token: '44244d640c320765eaa6d82823383d43e0655d8df29a6a04f2f9893f19a4a90a44ebd0db36b806fa1ce08b4a8bb1b92902f482bc01f8b83b4bc80d9d237a270f949aaad406a33315f009bb5c32a7a83b5c417b2fd4e4178ae0d4dbe3e1267915cbdf471988cf8a288bff034500ae409a44e9fd416876b925f8e12bcad900fdaa'
   },
   webpack: (config, { dev }) => {
 
@@ -18,11 +19,11 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: ['api.tere-khol.khural.rtyva.ru', 'mc.yandex.ru'],
+    domains: [`api.oopt.rtyva.ru`, 'mc.yandex.ru'],
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'api.tere-khol.khural.rtyva.ru',
+        protocol: 'http',
+        hostname: `api.oopt.rtyva.ru`,
         pathname: '/'
       },
       {
@@ -33,7 +34,6 @@ const nextConfig = {
     ]
   },
   compress: true,
-  // assetPrefix: "http://api.ohornadzor.rtyva.ru",
 
   reactStrictMode: false,
   output: 'standalone'

@@ -1,0 +1,2 @@
+cd backend && pm2 start npm --name oopt-backend -- run start
+cd frontend && pm2 start npm --name oopt-frontend -- run start 
