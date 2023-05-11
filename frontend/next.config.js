@@ -3,9 +3,9 @@ const webpack = require('webpack')
 const nextConfig = {
   // target: 'server',
   env: {
-    path: "api.oopt.rtyva.ru",
-    APIpath: `http://api.oopt.rtyva.ru`,
-    token: '44244d640c320765eaa6d82823383d43e0655d8df29a6a04f2f9893f19a4a90a44ebd0db36b806fa1ce08b4a8bb1b92902f482bc01f8b83b4bc80d9d237a270f949aaad406a33315f009bb5c32a7a83b5c417b2fd4e4178ae0d4dbe3e1267915cbdf471988cf8a288bff034500ae409a44e9fd416876b925f8e12bcad900fdaa'
+    path: "http://api.vetservice.rtyva.ru",
+    APIpath: `http://api.vetservice.rtyva.ru`,
+    token: 'c0ab10a72eebac346aef17d3888163af4d480e7c4f64b41d547f9ef9e10ed0a92b68362f8d5b395c8653b39ca854e954abe31581c6b69fa671cd508aef7f50bf29d6c3d82401b557911b68db2947babfa28a5d5b7cb273f3a96cb1ceea35df007a31152c43c26fcd15407c0eecba77011f1fc2edfc36da3c857b0e3ebdd7ebd1'
   },
   webpack: (config, { dev }) => {
 
@@ -19,11 +19,11 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: [`api.oopt.rtyva.ru`, 'mc.yandex.ru'],
+    domains: [`api.vetservice.rtyva.ru`, 'mc.yandex.ru'],
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: `api.oopt.rtyva.ru`,
+        hostname: `api.vetservice.rtyva.ru`,
         pathname: '/'
       },
       {

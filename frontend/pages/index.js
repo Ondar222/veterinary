@@ -1,10 +1,13 @@
 import { useRouter } from 'next/router'
 import React from "react";
+import { useEffect } from 'react';
 import MainPageLayout from '../layouts/MainPageLayout';
 import PostCard from '../components/Posts/PostCard'
 import { LastPosts } from "../components/LastPosts"
 import Carousel from '../components/Carousel';
-import PinnedLinks from '../components/PinnedLinks';
+// import PinnedLinks from '../components/PinnedLinks';
+import { Widget } from '../classes/pos';
+import Image from 'next/image';
 
 export const getServerSideProps = async ({ query: { page = 1 } }) => {
     const news = await fetch(`${process.env.APIpath}/api/posts?pagination[page]=${page}&pagination[pageSize]=5&sort=createdAt:desc&populate[0]=post_card.image`, {
@@ -36,6 +39,9 @@ export const getServerSideProps = async ({ query: { page = 1 } }) => {
 }
 
 const Home = ({ news, page, pageSize, pageCount, total, links }) => {
+    useEffect(() => {
+        Widget("https://pos.gosuslugi.ru/form", 343823)
+    }, [])
     const router = useRouter()
     let active = page
     let items = [];
@@ -58,7 +64,7 @@ const Home = ({ news, page, pageSize, pageCount, total, links }) => {
                 <Carousel slider={links.slider} />
             </div>
             <div className="w-full flex flex-row gap-3">
-                <div className="xs:w-full sm:w-5/5 md:w-5/5 lg:w-4/5">
+                <div className="xs:w-full sm:w-5/5 md:w-5/5 lg:w-5/5">
                     <div className='xs:flex xs:flex-col xs:gap-3 md:hidden'>
                         {
                             news.map((item) => <PostCard
@@ -71,10 +77,52 @@ const Home = ({ news, page, pageSize, pageCount, total, links }) => {
                         <LastPosts news={news} />
                     </div>
                 </div>
-                <div className="xs:hidden md:hidden lg:flex xs:flex-row md:flex-col gap-3 justify-start xs:w-full md:w-1/5 min-w-40 min-h-40">
+                {/* <div className="xs:hidden md:hidden lg:flex xs:flex-row md:flex-col gap-3 justify-start xs:w-full md:w-1/5 min-w-40 min-h-40">
                     <PinnedLinks pinned_links={links.pinned_links} />
-                </div>
+                </div> */}
+            <div className='container__gosuslugi'>
+                <div id='js-show-iframe-wrapper'>
+                    <div className='pos-banner-fluid bf-2'>
+
+                        <div className='bf-2__decor'>
+                            <div className='bf-2__logo-wrap'>
+                                <Image
+                                    className='bf-2__logo'
+                                    // src='https://pos.gosuslugi.ru/bin/banner-fluid/gosuslugi-logo.svg'
+                                    src='/gosuslugi-logo.svg'
+                                    alt='Госуслуги'
+                                    width={500}
+                                    height={100}
+                                />
+                                <div className='bf-2__slogan'>Решаем вместе</div >
+                            </div >
+                        </div >
+                        <div className='bf-2__content'>
+
+                            <div className='bf-2__description'>
+                                <span className='bf-2__text'>
+                                                Есть вопрос?
+                                            </span > 
+                                 <span className='bf-2__text bf-2__text_small'>
+                                                Напишите нам
+                                            </span >
+                            </div >
+
+                            <div className='bf-2__btn-wrap'>
+                                {/* <!-- pos-banner-btn_2 не удалять; другие классы не добавлять --> */}
+                                <button
+                                                className='pos-banner-btn_2'
+                                                type='button'
+                                            >Сообщить о проблеме
+                                            </button >
+                            </div >
+                        </div >
+                    </div >
             </div>
+                </div >
+            </div>
+
+
         </MainPageLayout >
     )
 }

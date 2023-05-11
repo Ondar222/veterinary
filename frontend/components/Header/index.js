@@ -23,20 +23,20 @@ const Header = observer(() => {
     }, [])
     const eyeDamage = useRef()
     return (
-        <header className="flex flex-col dark:bg-gray-700 text-gray-300 dark:text-black font-light">
+        <header className="flex flex-col dark:bg-gray-700 text-gray-100 dark:text-black font-light">
 
             <div className="container mx-auto flex xs:flex-col md:flex-row xs:items-start md:items-center gap-4 justify-between py-4">
                 <div className="flex flex-row items-center text-lg font-light gap-3">
                     <div className="sm:hidden xs:hidden md:block">
                         <Link href="/">
                             <a>
-                                <Image loader={myImageLoader} alt='some' src="/tuvan_herb.png" width={80} height={80} className="dark:grayscale" />
+                                <Image loader={myImageLoader} alt='some' src="/logo10.png" width={80} height={80} className="dark:grayscale" />
                             </a>
                         </Link>
 
                     </div>
 
-                    <h1 className="text-2xl font-normal">Государственный комитет по охране объектов животного мира республики тыва</h1>
+                    <h1 className="text-2xl font-normal">Служба ветеринарии Республики Тыва</h1>
                 </div>
 
                 <div className="flex gap-3 items-center">

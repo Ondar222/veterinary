@@ -8,23 +8,23 @@ const Footer = (props) =>
         <section className="container flex flex-col mx-auto gap-4 text-white dark:text-black">
             <div className="flex flex-wrap justify-between">
                 <div className="flex flex-col gap-4">
-                    <Link href="/"><a>Государственный комитет по охране объектов животного мира республики тыва</a></Link>
+                    <Link href="/"><a>Служба ветеринарии Республики Тыва</a></Link>
                     <Link href="/"><a>Официальный интернет-ресурс</a></Link>
 
                     <div className="flex flex-col gap-3">
                         <div className="flex flex-row items-center gap-3">
-                            <AiFillPhone />+7(39422)5-60-61
+                            <AiFillPhone />	5-61-77
                         </div>
                         <div className="flex flex-row items-center gap-3">
-                            <AiOutlineMail />ohota-tuva@yandex.ru
+                            <AiOutlineMail /> vet.tuva@mail.ru
                         </div>
                     </div>
                     <div className="flex gap-4">
-                        <Link className="cursor-pointer" href="https://vk.com/ohotnadzor17">
+                        <Link className="cursor-pointer" href="https://vk.com/vetsluzhba17">
                             <a><Image loader={myImageLoader} alt='some' src="/vk_logo.png" width={30} height={30} className="cursor-pointer dark:grayscale" /></a>
                             
                         </Link>
-                        <Link className="cursor-pointer" href="https://t.me/polpredstvotuva">
+                        <Link className="cursor-pointer" href="https://t.me/vetsluzhba17">
                             <a><Image loader={myImageLoader} alt='some' src="/tg_logo.png" width={30} height={30} className="cursor-pointer dark:grayscale" /></a>
                         </Link>
                     </div>

@@ -22,11 +22,11 @@ const LastPosts = (params) => {
   return (
     <div className="last-news">
       <Link href="/news">
-        <a className="font-semibold text-xl text-blue-800 tracking-wider">
+        <a className="font-semibold text-xl text-blue-800 tracking-wider pl-2">
           Все новости
         </a>
       </Link>
-      <div className="last-news__container">
+      <div className="last-news__container" >
         {params?.news?.map((item) => {
           return (
             <div
@@ -43,7 +43,7 @@ const LastPosts = (params) => {
               </div>
 
               <div className="last-news__card-content__container">
-                <div className="last-news__card-content opacity-75 mr-5">
+                <div className="last-news__card-content opacity-75 mr-4">
                   <Link href={`/news/${item.id}`}>
                     <a className="last-news__card-title">
                       <h3 className="text-lg break-words overflow-hidden text-ellipsis whitespace-nowrap">

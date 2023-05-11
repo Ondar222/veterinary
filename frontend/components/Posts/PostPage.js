@@ -14,6 +14,7 @@ export const PostPage = (params) => {
             <div className='py-3 leading-8'>
                 {parser(params.body)}
             </div>
+         
             <button onClick={() => router.push('/news')} className="button dark:bg-gray-500">
                 Назад к новостям
             </button>

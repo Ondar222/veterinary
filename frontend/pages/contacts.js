@@ -32,9 +32,9 @@ export default function Contacts({ content }) {
           <div>
 
           </div>
-          <div className="flex flex-col gap-5 text-xl font-semibold">
-            <p>Государственный комитет по охране объектов животного мира республики тыва на карте</p>
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac097f156530a6ab29f96082781a0c423774710c9a547d3aab423941620e5ea97&amp;source=constructor" width="100%" height="400" frameBorder="0"></iframe>
+          <div className="map__veterinary">
+            <p>Служба ветеринарии Республики Тыва</p>
+            <iframe className='map__veterinary' src="https://yandex.ru/map-widget/v1/?um=constructor%3A4355f417be594224598fd47f0de72459ee91f2a9b2699155825a794c3b511712&amp;source=constructor" width="800" height="400"></iframe>
           </div>
 
         </div>

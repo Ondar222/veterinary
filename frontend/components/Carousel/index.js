@@ -13,8 +13,8 @@ const Carousel = (params) => {
                     <div key={index} className="item">
                         <div className="container mx-auto relative grid sm:grid-cols-1 md:grid-cols-2">
                             <div className="text select-none xs:absolute top-0 right-0 bottom-0 sm:absolute md:static md:flex flex-col justify-center items-center">
-                                <div className="text-lg p-5">{item.title}</div>
-                                <div className="w-full text-md px-5">{parser(item?.content)}</div>
+                                <div className="title__carousel">{item.title}</div>
+                                <div className="content__carousel">{parser(item?.content)}</div>
                             </div>
                             <div className="relative block w-full h-full
                                             sm:min-w-full sm:max-h-[300px] sm:min-h-[300px]

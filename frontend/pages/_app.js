@@ -3,9 +3,11 @@ import Head from 'next/head'
 import '../styles/globals.scss'
 import { observer } from 'mobx-react-lite';
 import '../public/bvi/css/bvi.css'
-import { FaRegEye } from 'react-icons/fa'
+// import { FaRegEye } from 'react-icons/fa'
 import Header from '../components/Header'
+import '../styles/pos.scss'
 
+import Script from 'next/script';
 const MyApp = observer(({ Component, pageProps }) => (
   <>
     <Head>
@@ -20,6 +22,7 @@ const MyApp = observer(({ Component, pageProps }) => (
     </Head>
 
     <div className='min-h-screen flex flex-col'>
+      <Script async src="/js/pos.js"></Script>
       <Header />
       <Component {...pageProps} />
     </div>
